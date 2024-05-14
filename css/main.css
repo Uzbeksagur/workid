@@ -162,3 +162,80 @@ header {
 section {
     background: #e7e6e2;
 }
+
+footer {
+    padding: 40px 0;
+    color: #1a1918;
+}
+
+.lang__btn {
+    width: 240px;
+    display: flex;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    border: #d4a752 2px solid;
+    padding: 14px 0;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #1a1918;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang__btn:hover img{
+    margin-left: 14px;
+}
+
+.lang__text {
+    font-size: 14px;
+}
+
+.lang__rofl {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.lang__btn img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.lang__flag {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.socials__btn {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    border: #d4a752 2px solid;
+    color: #1a1918;
+    border-radius: 6px;
+    padding: 6px 14px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.socials__btn:hover {
+    margin-left: 20px;
+}
+
+.socials__btn:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials__logo {
+    width: 30px;
+}
+
+.socials__name {
+    margin-left: 10px;
+}
