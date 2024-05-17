@@ -10,24 +10,30 @@
     <style>
         body {
             font-family: "Rubik", sans-serif;
-            background: url('./img/404.jfif');
+            background: url('./img/404.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
             justify-content: center;
         }
         h2 {
-            color: #e7e6e2;
+            color: #cc3d54;
             font-size: 48px;
-            width: 55%;
+            width: 52%;
             text-align: center;
             position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
+            top: 30%;
+            text-shadow:0 0 5px #cc3d54;
+            transform: rotate(1.5deg) translate(-20px, 0);
         }
     </style>
 </head>
 <body>
     <h2>Você realmente achou que eu perderia tempo criando mídias sociais? Que ingênuo!</h2>
+    <script>
+        setTimeout( () => {
+            window.location.href = "../index.html"
+        }, 10000) 
+    </script>
 </body>
 </html>
