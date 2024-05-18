@@ -1,0 +1,46 @@
+* {
+    transition: .35s;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    color: #1a1918;
+}
+
+.jb {
+    justify-content: space-between;
+}
+
+.ac {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* nav  */
+
+.nav {
+    padding: 24px 0;
+}
+
+.types__find {
+    margin-right: 24px;
+}
+
+.types__post {
+    border-bottom: 3px solid;
+    padding: 8px 0;
+}
+
+.login img {
+    width: 30px;
+}
