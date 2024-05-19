@@ -1,0 +1,35 @@
+.nav {
+    padding: 24px 0;
+}
+
+.logo {
+    font-weight: 800;
+}
+
+.btn {
+    min-width: 120px;
+    text-align: center;
+    border: 2px solid #d4a752;
+    padding: 6px 0;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    height: fit-content;
+}
+
+.btn:hover {
+    border: 2px solid var(--white);
+}
+
+.types a:first-of-type {
+    margin-right: 20px;
+}
+
+.login img {
+    width: 30px;
+    margin-right: 12px;
+}
+
+.login {
+    font-weight: 500;
+}

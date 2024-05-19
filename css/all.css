@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --black: #1a1918;
+    --white: #e7e6e2;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+.wh {
+    color: var(--white);
+}
+
+.bl {
+    color: var(--black);
+}
+
+.jb {
+    justify-content: space-between;
+}
+
+.ac {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+a {
+    transition: .3s ease;
+}

@@ -4,256 +4,268 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkId</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- scripts -->
+    <script src="./gsap/gsap.min.js" defer></script>
+	<script src="./gsap/ScrollTrigger.min.js" defer></script>
+	<script src="./gsap/ScrollSmoother.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <header>    
-        <div class="container">
-            <div class="nav">
-                <h2 class="logo">WorkId</h2>
-                <div class="types">
-                    <a href="#" class="btn-active btn types__find">Find Work</a>
-                    <a href="./post.html" class="btn types__post">Post Job</a>
-                </div>
-                <a href="#" class="login">
-                    <img src="./img/login.svg" class="login__img">
-                    <p class="login__title">Register</p>
-                </a>
-            </div>
-            <div class="content">
-                <div class="content__primary">
-                    <h1 class="title">WorkId - Find work anywhere</h1>
-                    <img src="./img/desktop.png" class="content__img">
-                </div>
-                <form class="content__form">
-                    <div class="btn content__btn" type="button">
-                        <img src="./img/glass.svg" class="img-search">
-                        <p class="text">Find Work</p>
+    <div class="parent">
+        <div class="wrapper">
+            <header>    
+                <div class="container">
+                    <div class="nav">
+                        <h2 class="logo">WorkId</h2>
+                        <div class="types">
+                            <a href="#" class="btn-active btn types__find">Find Work</a>
+                            <a href="./post.html" class="btn types__post">Post Job</a>
+                        </div>
+                        <a href="./login.html" class="login">
+                            <img src="./img/login.svg" class="login__img">
+                            <p class="login__title">Register</p>
+                        </a>
                     </div>
-                    <div class="content__input-group">
-                        <img class="content__loop" src="./img/glass-black.svg">
-                        <input type="text" class="content__input" placeholder="Where you want to work?"></input>
-                    </div>
-                </form>
-                <div class="content__secound">
-                    <p class="content__stat"><span>108,213</span> actual vacancies from <span>34,826</span> companies</p>
-                    <p class="content__stat"><span>5,378,971</span> candidates entrusted us with their resume</p>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section>
-        <div class="container">
-            <div class="top-prof">
-                <h2 class="top-prof__title">Browse popular professions</h2>
-                <div class="top-prof__desc">
-                    <p>Looking for Talents?</p><a href="#">Find the best one</a>
-                </div>
-                <div class="top-prof__block">
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.85/5</span>
-                            <p>345 vacancies</p>
+                    <div class="content">
+                        <div class="content__primary">
+                            <h1 class="title">WorkId - Find work anywhere</h1>
+                            <img src="./img/desktop.png" class="content__img">
                         </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.23/5</span>
-                            <p>765 vacancies</p>
+                        <form class="content__form">
+                            <div class="btn content__btn" type="button">
+                                <img src="./img/glass.svg" class="img-search">
+                                <p class="text">Find Work</p>
+                            </div>
+                            <div class="content__input-group">
+                                <img class="content__loop" src="./img/glass-black.svg">
+                                <input type="text" class="content__input" placeholder="Where you want to work?"></input>
+                            </div>
+                        </form>
+                        <div class="content__secound">
+                            <p class="content__stat"><span>108,213</span> actual vacancies from <span>34,826</span> companies</p>
+                            <p class="content__stat"><span>5,378,971</span> candidates entrusted us with their resume</p>
                         </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.53/5</span>
-                            <p>3456 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.2/5</span>
-                            <p>346 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.65/5</span>
-                            <p>864 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.24/5</span>
-                            <p>4583 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.86/5</span>
-                            <p>5486 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.42/5</span>
-                            <p>4557 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.44/5</span>
-                            <p>246 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.74/5</span>
-                            <p>8643 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.25/5</span>
-                            <p>7545 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Browse more...</h2>
-                    </a>
-                </div>
-            </div>
-            <div class="top-city">
-                <h2 class="top-city__title">Browse popular locations</h2>
-                <div class="top-city__desc">
-                    <p>Looking for Location?</p><a href="#">Find the best one</a>
-                </div>
-                <div class="top-city__block">
-                    <a class="top-city__item">
-                        <img src="./img/flagSe.svg">
-                        <p>Alingsås</p>
-                    </a>
-                    <a class="top-city__item">
-                        <img src="./img/flagUa.svg">
-                        <p>Kharkiv</p>
-                    </a>
-                    <a class="top-city__item">
-                        <img src="./img/flagBo.svg">
-                        <p>Bloemfontein</p>
-                    </a>
-                    <a class="top-city__item">
-                        <img src="./img/flagCh.svg">
-                        <p>Antofagasta</p>
-                    </a>
-                    <a class="top-city__item">
-                        <img src="./img/flagWf.svg">
-                        <p>Marseille</p>
-                    </a>
-                    <a class="top-city__item">
-                        <img src="./img/flagEng.svg">
-                        <p>Westminster</p>
-                    </a>
-                    <a class="top-city__item">
-                        <img src="./img/flagPt.svg">
-                        <p>Fátima</p>
-                    </a>
-                    <a class="top-city__item">
-                        <p>Browse more...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="messages">
-                <div class="messages__block">
-                    <h2>Fresh vacancies instantly appear in messengers!</h2>
-                    <div class="messages__btn">
-                        <a href="https://www.instagram.com/" target="_blank">Receive in Instagram</a>
-                        <a href="https://web.telegram.org/" target="_blank">Receive in Telegram</a>
                     </div>
                 </div>
-                <img src="./img/plane.png">
-            </div>
+            </header>
+            <section>
+                <div class="container">
+                    <div class="top-prof">
+                        <h2 class="top-prof__title">Browse popular professions</h2>
+                        <div class="top-prof__desc">
+                            <p>Looking for Talents?</p><a href="./profesions.html">Find the best one</a>
+                        </div>
+                        <div class="top-prof__block">
+                            <a href="./profesions.html" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.85/5</span>
+                                    <p>345 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.23/5</span>
+                                    <p>765 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.53/5</span>
+                                    <p>3456 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.2/5</span>
+                                    <p>346 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.65/5</span>
+                                    <p>864 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.24/5</span>
+                                    <p>4583 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.86/5</span>
+                                    <p>5486 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.42/5</span>
+                                    <p>4557 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.44/5</span>
+                                    <p>246 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.74/5</span>
+                                    <p>8643 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Development & IT</h2>
+                                <div class="top-prof__stat">
+                                    <img src="./img/star.svg">
+                                    <span>4.25/5</span>
+                                    <p>7545 vacancies</p>
+                                </div>
+                            </a>
+                            <a href="#" class="top-prof__item">
+                                <h2>Browse more...</h2>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="top-city">
+                        <h2 class="top-city__title">Browse popular locations</h2>
+                        <div class="top-city__desc">
+                            <p>Looking for Location?</p><a href="./cities.html">Find the best one</a>
+                        </div>
+                        <div class="top-city__block">
+                            <a class="top-city__item">
+                                <img src="./img/flagSe.svg">
+                                <p>Alingsås</p>
+                            </a>
+                            <a class="top-city__item">
+                                <img src="./img/flagUa.svg">
+                                <p>Kharkiv</p>
+                            </a>
+                            <a class="top-city__item">
+                                <img src="./img/flagBo.svg">
+                                <p>Bloemfontein</p>
+                            </a>
+                            <a class="top-city__item">
+                                <img src="./img/flagCh.svg">
+                                <p>Antofagasta</p>
+                            </a>
+                            <a class="top-city__item">
+                                <img src="./img/flagWf.svg">
+                                <p>Marseille</p>
+                            </a>
+                            <a class="top-city__item">
+                                <img src="./img/flagEng.svg">
+                                <p>Westminster</p>
+                            </a>
+                            <a class="top-city__item">
+                                <img src="./img/flagPt.svg">
+                                <p>Fátima</p>
+                            </a>
+                            <a class="top-city__item">
+                                <p>Browse more...</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="messages">
+                        <div class="messages__block">
+                            <h2>Fresh vacancies instantly appear in messengers!</h2>
+                            <div class="messages__btn">
+                                <a href="https://www.instagram.com/" target="_blank">Receive in Instagram</a>
+                                <a href="https://web.telegram.org/" target="_blank">Receive in Telegram</a>
+                            </div>
+                        </div>
+                        <img src="./img/plane.png">
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="container">
+                    <div class="lang">
+                        <h2 class="logo">WorkId</h2>
+                        <a href="#" class="lang__btn">
+                            <p>Português</p>
+                            <img src="./img/flagPt.svg">
+                        </a>
+                        <div class="lang__rofl">
+                            <p class="lang__text">English is better</p>
+                            <img src="./img/flagEng.svg" class="lang__flag">
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list__find">
+                            <h3 class="list__title">To the applicant</h3>
+                            <ul>
+                                <a href="#"><li class="list__item">Find a job</li></a>
+                                <a href="#"><li class="list__item">Post a resume</li></a>
+                                <a href="#"><li class="list__item">How to make a resume</li></a>
+                            </ul>
+                        </div>
+                        <div class="list__post">
+                            <h3 class="list__title">To the employer</h3>
+                            <ul>
+                                <a href="#"><li class="list__item">Add a vacancy</li></a>
+                                <a href="#"><li class="list__item">Resume Search</li></a>
+                                <a href="#"><li class="list__item">Our services</li></a>
+                            </ul>
+                        </div>
+                        <div class="list__all">
+                            <h3 class="list__title">WorkId</h3>
+                            <ul>
+                                <a href="#"><li class="list__item">About the company</li></a>
+                                <a href="#"><li class="list__item">Brand documentation</li></a>
+                                <a href="#"><li class="list__item">Write to tech support</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a href="./404.html" class="socials__btn">
+                            <img src="./img/facebook.svg" class="socials__logo">
+                            <p class="socials__name">Facebook</p>
+                        </a>
+                        <a href="./404.html" class="socials__btn">
+                            <img src="./img/linkedin.svg" class="socials__logo">
+                            <p class="socials__name">Linkedin</p>
+                        </a>
+                        <a href="./404.html" class="socials__btn">
+                            <img src="./img/twitter.svg" class="socials__logo">
+                            <p class="socials__name">Twitter</p>
+                        </a>
+                    </div>
+                </div>
+                <p class="permisions">
+                    Todos os direitos são reservados e protegidos pelas leis vigentes em todo o mundo. O uso dos materiais deste site só é possível com a permissão por escrito da WorkID LLC. A administração não é responsável pelo conteúdo dos anúncios postados. E, ao mesmo tempo, Lilian Sevcenco se esforçou muito e gastou muito tempo neste projeto. Portanto, as estimativas abaixo de 20 Não são aceitas.
+                </p>
+            </footer>
         </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="lang">
-                <h2 class="logo">WorkId</h2>
-                <a href="#" class="lang__btn">
-                    <p>Português</p>
-                    <img src="./img/flagPt.svg">
-                </a>
-                <div class="lang__rofl">
-                    <p class="lang__text">English is better</p>
-                    <img src="./img/flagEng.svg" class="lang__flag">
-                </div>
-            </div>
-            <div class="list">
-                <div class="list__find">
-                    <h3 class="list__title">To the applicant</h3>
-                    <ul>
-                        <a href="#"><li class="list__item">Find a job</li></a>
-                        <a href="#"><li class="list__item">Post a resume</li></a>
-                        <a href="#"><li class="list__item">How to make a resume</li></a>
-                    </ul>
-                </div>
-                <div class="list__post">
-                    <h3 class="list__title">To the employer</h3>
-                    <ul>
-                        <a href="#"><li class="list__item">Add a vacancy</li></a>
-                        <a href="#"><li class="list__item">Resume Search</li></a>
-                        <a href="#"><li class="list__item">Our services</li></a>
-                    </ul>
-                </div>
-                <div class="list__all">
-                    <h3 class="list__title">WorkId</h3>
-                    <ul>
-                        <a href="#"><li class="list__item">About the company</li></a>
-                        <a href="#"><li class="list__item">Brand documentation</li></a>
-                        <a href="#"><li class="list__item">Write to tech support</li></a>
-                    </ul>
-                </div>
-            </div>
-            <div class="socials">
-                <a href="./404.html" class="socials__btn">
-                    <img src="./img/facebook.svg" class="socials__logo">
-                    <p class="socials__name">Facebook</p>
-                </a>
-                <a href="./404.html" class="socials__btn">
-                    <img src="./img/linkedin.svg" class="socials__logo">
-                    <p class="socials__name">Linkedin</p>
-                </a>
-                <a href="./404.html" class="socials__btn">
-                    <img src="./img/twitter.svg" class="socials__logo">
-                    <p class="socials__name">Twitter</p>
-                </a>
-            </div>
-        </div>
-        <p class="permisions">
-            Todos os direitos são reservados e protegidos pelas leis vigentes em todo o mundo. O uso dos materiais deste site só é possível com a permissão por escrito da WorkID LLC. A administração não é responsável pelo conteúdo dos anúncios postados. E, ao mesmo tempo, Lilian Sevcenco se esforçou muito e gastou muito tempo neste projeto. Portanto, as estimativas abaixo de 20 Não são aceitas.
-        </p>
-    </footer>
+    </div>
 </body>
 </html>

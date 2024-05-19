@@ -4,208 +4,765 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkId</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- scripts -->
+    <script src="./gsap/gsap.min.js" defer></script>
+	<script src="./gsap/ScrollTrigger.min.js" defer></script>
+	<script src="./gsap/ScrollSmoother.min.js" defer></script>
+    <script src="./js/app.js" defer></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/profesions.css">
 </head>
 <body>
-    <header>    
-        <div class="container">
-            <div class="nav">
-                <h2 class="logo">WorkId</h2>
-                <div class="types">
-                    <a href="#" class="btn-active btn types__find">Find Work</a>
-                    <a href="#" class="btn types__post">Post Job</a>
-                </div>
-                <a href="#" class="login">
-                    <img src="./img/login.svg" class="login__img">
-                    <p class="login__title">Register</p>
-                </a>
-            </div>
-            <div class="content">
-                <div class="content__primary">
-                    <h1 class="title">WorkId - Find work anywhere</h1>
-                    <img src="./img/desktop.png" class="content__img">
-                </div>
-                <form class="content__form">
-                    <div class="btn content__btn" type="button">
-                        <img src="./img/glass.svg" class="img-search">
-                        <p class="text">Find Work</p>
+    <div class="parent">
+        <div class="wrapper">
+            <header class="container">
+                <div class="nav flex ac jb">
+                    <h2 class="logo">WorkId</h2>
+                    <div class="types flex">
+                        <a href="./index.html" class="btn wh">Find Work</a>
+                        <a href="./post.html" class="btn wh">Post Job</a>
                     </div>
-                    <div class="content__input-group">
-                        <img class="content__loop" src="./img/glass-black.svg">
-                        <input type="text" class="content__input" placeholder="Where you want to work?"></input>
+                    <a href="./login.html" class="login flex ac">
+                        <img src="./img/login.svg">
+                        <p class="wh">Register</p>
+                    </a>
+                </div>
+                <div class="category flex ">
+                    <a id="active" href="#">Top professions</a>
+                    <a href="#">Top cities</a>
+                </div>
+            </header>
+            <main class="container">
+                <div class="galery flex">
+                    <div class="galery__left">
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/24029820/pexels-photo-24029820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Tax Advisor</h3>
+                                <span>24</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22618184/pexels-photo-22618184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Accountant</h3>
+                                <span>245</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23541799/pexels-photo-23541799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Actor</h3>
+                                <span>23</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22638802/pexels-photo-22638802.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Actuary</h3>
+                                <span>543</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/10295057/pexels-photo-10295057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Advertising Executive</h3>
+                                <span>65</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23221813/pexels-photo-23221813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Agricultural Engineer</h3>
+                                <span>643</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/24035355/pexels-photo-24035355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Airline Pilot</h3>
+                                <span>64</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21369728/pexels-photo-21369728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Animator</h3>
+                                <span>63</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23891480/pexels-photo-23891480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Anesthesiologist</h3>
+                                <span>24</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22908923/pexels-photo-22908923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Anthropologist</h3>
+                                <span>75</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23105762/pexels-photo-23105762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>App Developer</h3>
+                                <span>37</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21348175/pexels-photo-21348175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Archaeologist</h3>
+                                <span>78</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/20193054/pexels-photo-20193054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Architect</h3>
+                                <span>948</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/7440406/pexels-photo-7440406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Archivist</h3>
+                                <span>32</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21336291/pexels-photo-21336291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Art Director</h3>
+                                <span>85</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23653095/pexels-photo-23653095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Art Historian</h3>
+                                <span>83</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/24186300/pexels-photo-24186300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Artist</h3>
+                                <span>23</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/17806538/pexels-photo-17806538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Astronomer</h3>
+                                <span>193</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/24286519/pexels-photo-24286519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Astrophysicist</h3>
+                                <span>975</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/24245174/pexels-photo-24245174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Athletic Trainer</h3>
+                                <span>627</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/18781953/pexels-photo-18781953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Attorney</h3>
+                                <span>53</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/19565726/pexels-photo-19565726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Audiologist</h3>
+                                <span>877</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22610782/pexels-photo-22610782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Author</h3>
+                                <span>47</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/24023467/pexels-photo-24023467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Automotive Engineer</h3>
+                                <span>76</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23962930/pexels-photo-23962930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Banker</h3>
+                                <span>677</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/17298488/pexels-photo-17298488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Barber</h3>
+                                <span>643</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23549050/pexels-photo-23549050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Bartender</h3>
+                                <span>234</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21795425/pexels-photo-21795425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Biochemist</h3>
+                                <span>264</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23081238/pexels-photo-23081238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Biomedical Engineer</h3>
+                                <span>26</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22667947/pexels-photo-22667947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Biostatistician</h3>
+                                <span>75</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/18129477/pexels-photo-18129477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Blogger</h3>
+                                <span>346</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/20886069/pexels-photo-20886069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Book Editor</h3>
+                                <span>37</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22475916/pexels-photo-22475916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Bookkeeper</h3>
+                                <span>86</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23709323/pexels-photo-23709323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Botanist</h3>
+                                <span>34</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21967252/pexels-photo-21967252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Broadcast Engineer</h3>
+                                <span>86</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22866338/pexels-photo-22866338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Broadcaster</h3>
+                                <span>844</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
                     </div>
-                </form>
-                <div class="content__secound">
-                    <p class="content__stat"><span>108,213</span> actual vacancies from <span>34,826</span> companies</p>
-                    <p class="content__stat"><span>5,378,971</span> candidates entrusted us with their resume</p>
+                    <div class="galery__right">
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/20464639/pexels-photo-20464639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Carpenter</h3>
+                                <span>955</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22940232/pexels-photo-22940232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Cartographer</h3>
+                                <span>374</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/13623241/pexels-photo-13623241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Cashier</h3>
+                                <span>875</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/5804955/pexels-photo-5804955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Chef</h3>
+                                <span>834</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21765179/pexels-photo-21765179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Chemical Engineer</h3>
+                                <span>356</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/18664921/pexels-photo-18664921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Chemist</h3>
+                                <span>35</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21967531/pexels-photo-21967531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Child Psychologist</h3>
+                                <span>35</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21835327/pexels-photo-21835327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Chiropractor</h3>
+                                <span>467</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/24287053/pexels-photo-24287053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Civil Engineer</h3>
+                                <span>38</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/24233542/pexels-photo-24233542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Climatologist</h3>
+                                <span>97</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22145412/pexels-photo-22145412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Coach</h3>
+                                <span>356</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23914569/pexels-photo-23914569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>College Professor</h3>
+                                <span>86</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/13463544/pexels-photo-13463544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Comedian</h3>
+                                <span>785</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22619498/pexels-photo-22619498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Computer Programmer</h3>
+                                <span>476</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/16738836/pexels-photo-16738836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Conservationist</h3>
+                                <span>463</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22857372/pexels-photo-22857372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Construction Manager</h3>
+                                <span>28</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/16310512/pexels-photo-16310512.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Content Writer</h3>
+                                <span>97</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/11555528/pexels-photo-11555528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Copy Editor</h3>
+                                <span>49</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23384634/pexels-photo-23384634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Copywriter</h3>
+                                <span>678</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/16033674/pexels-photo-16033674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Coroner</h3>
+                                <span>634</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/20199821/pexels-photo-20199821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Corporate Trainer</h3>
+                                <span>255</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21795464/pexels-photo-21795464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Counselor</h3>
+                                <span>275</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/18187689/pexels-photo-18187689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Court Reporter</h3>
+                                <span>235</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/19721635/pexels-photo-19721635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Curator</h3>
+                                <span>75</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21771490/pexels-photo-21771490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Customer Service Representative</h3>
+                                <span>364</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22885475/pexels-photo-22885475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Data Analyst</h3>
+                                <span>834</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22644030/pexels-photo-22644030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Data Scientist</h3>
+                                <span>96</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22674727/pexels-photo-22674727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Database Administrator</h3>
+                                <span>762</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22764654/pexels-photo-22764654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Dental Hygienist</h3>
+                                <span>87</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/20988878/pexels-photo-20988878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Dentist</h3>
+                                <span>734</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/22632054/pexels-photo-22632054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Dermatologist</h3>
+                                <span>643</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/20889634/pexels-photo-20889634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Dietitian</h3>
+                                <span>78</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23451993/pexels-photo-23451993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Diplomat</h3>
+                                <span>789</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/20419203/pexels-photo-20419203.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Economist</h3>
+                                <span>984</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/21414057/pexels-photo-21414057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Education Administrator</h3>
+                                <span>435</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/23228195/pexels-photo-23228195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Electrical Engineer</h3>
+                                <span>678</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <div></div>
+                            <img src="https://images.pexels.com/photos/19472339/pexels-photo-19472339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <div class="galery__text flex jb ac">
+                                <h3>Elementary School Teacher</h3>
+                                <span>36</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, quam dapibus accumsan rutrum, tortor tellus pulvinar tortor, id finibus libero metus a nisi.</p>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </main>
+            <footer>
+                <div class="container">
+                    <div class="lang">
+                        <h2 class="logo">WorkId</h2>
+                        <a href="#" class="lang__btn">
+                            <p>Português</p>
+                            <img src="./img/flagPt.svg">
+                        </a>
+                        <div class="lang__rofl">
+                            <p class="lang__text">English is better</p>
+                            <img src="./img/flagEng.svg" class="lang__flag">
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list__find">
+                            <h3 class="list__title">To the applicant</h3>
+                            <ul>
+                                <a href="#"><li class="list__item">Find a job</li></a>
+                                <a href="#"><li class="list__item">Post a resume</li></a>
+                                <a href="#"><li class="list__item">How to make a resume</li></a>
+                            </ul>
+                        </div>
+                        <div class="list__post">
+                            <h3 class="list__title">To the employer</h3>
+                            <ul>
+                                <a href="#"><li class="list__item">Add a vacancy</li></a>
+                                <a href="#"><li class="list__item">Resume Search</li></a>
+                                <a href="#"><li class="list__item">Our services</li></a>
+                            </ul>
+                        </div>
+                        <div class="list__all">
+                            <h3 class="list__title">WorkId</h3>
+                            <ul>
+                                <a href="#"><li class="list__item">About the company</li></a>
+                                <a href="#"><li class="list__item">Brand documentation</li></a>
+                                <a href="#"><li class="list__item">Write to tech support</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a href="./404.html" class="socials__btn">
+                            <img src="./img/facebook.svg" class="socials__logo">
+                            <p class="socials__name">Facebook</p>
+                        </a>
+                        <a href="./404.html" class="socials__btn">
+                            <img src="./img/linkedin.svg" class="socials__logo">
+                            <p class="socials__name">Linkedin</p>
+                        </a>
+                        <a href="./404.html" class="socials__btn">
+                            <img src="./img/twitter.svg" class="socials__logo">
+                            <p class="socials__name">Twitter</p>
+                        </a>
+                    </div>
+                </div>
+                <p class="permisions">
+                    Todos os direitos são reservados e protegidos pelas leis vigentes em todo o mundo. O uso dos materiais deste site só é possível com a permissão por escrito da WorkID LLC. A administração não é responsável pelo conteúdo dos anúncios postados. E, ao mesmo tempo, Lilian Sevcenco se esforçou muito e gastou muito tempo neste projeto. Portanto, as estimativas abaixo de 20 Não são aceitas.
+                </p>
+            </footer>
         </div>
-    </header>
-    <section>
-        <div class="container">
-            <div class="mesages"></div>
-            <div class="top-prof">
-                <h2 class="top-prof__title">Browse popular professions</h2>
-                <div class="top-prof__desc">
-                    <p>Looking for Talents?</p><a href="#">Find the best one</a>
-                </div>
-                <div class="top-prof__block">
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.85/5</span>
-                            <p>345 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.23/5</span>
-                            <p>765 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.53/5</span>
-                            <p>3456 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.2/5</span>
-                            <p>346 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.65/5</span>
-                            <p>864 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.24/5</span>
-                            <p>4583 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.86/5</span>
-                            <p>5486 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.42/5</span>
-                            <p>4557 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.44/5</span>
-                            <p>246 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.74/5</span>
-                            <p>8643 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Development & IT</h2>
-                        <div class="top-prof__stat">
-                            <img src="./img/star.svg">
-                            <span>4.25/5</span>
-                            <p>7545 vacancies</p>
-                        </div>
-                    </a>
-                    <a href="#" class="top-prof__item">
-                        <h2>Browse more...</h2>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="lang">
-                <h2 class="logo">WorkId</h2>
-                <a href="#" class="lang__btn">
-                    <p>Português</p>
-                    <img src="./img/flagPt.svg">
-                </a>
-                <div class="lang__rofl">
-                    <p class="lang__text">English is better</p>
-                    <img src="./img/flagEng.svg" class="lang__flag">
-                </div>
-            </div>
-            <div class="list">
-                <div class="list__find">
-                    <h3 class="list__title">To the applicant</h3>
-                    <ul>
-                        <a href="#"><li class="list__item">Find a job</li></a>
-                        <a href="#"><li class="list__item">Post a resume</li></a>
-                        <a href="#"><li class="list__item">How to make a resume</li></a>
-                    </ul>
-                </div>
-                <div class="list__post">
-                    <h3 class="list__title">To the employer</h3>
-                    <ul>
-                        <a href="#"><li class="list__item">Add a vacancy</li></a>
-                        <a href="#"><li class="list__item">Resume Search</li></a>
-                        <a href="#"><li class="list__item">Our services</li></a>
-                    </ul>
-                </div>
-                <div class="list__all">
-                    <h3 class="list__title">WorkId</h3>
-                    <ul>
-                        <a href="#"><li class="list__item">About the company</li></a>
-                        <a href="#"><li class="list__item">Brand documentation</li></a>
-                        <a href="#"><li class="list__item">Write to tech support</li></a>
-                    </ul>
-                </div>
-            </div>
-            <div class="socials">
-                <a href="./404.html" class="socials__btn">
-                    <img src="./img/facebook.svg" class="socials__logo">
-                    <p class="socials__name">Facebook</p>
-                </a>
-                <a href="./404.html" class="socials__btn">
-                    <img src="./img/linkedin.svg" class="socials__logo">
-                    <p class="socials__name">Linkedin</p>
-                </a>
-                <a href="./404.html" class="socials__btn">
-                    <img src="./img/twitter.svg" class="socials__logo">
-                    <p class="socials__name">Twitter</p>
-                </a>
-            </div>
-        </div>
-        <p class="permisions">
-            Todos os direitos são reservados e protegidos pelas leis vigentes em todo o mundo. O uso dos materiais deste site só é possível com a permissão por escrito da WorkID LLC. A administração não é responsável pelo conteúdo dos anúncios postados. E, ao mesmo tempo, Lilian Sevcenco se esforçou muito e gastou muito tempo neste projeto. Portanto, as estimativas abaixo de 20 Não são aceitas.
-        </p>
-    </footer>
+    </div>
 </body>
 </html>

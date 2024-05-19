@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkId</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- scripts -->
+    <script src="./gsap/gsap.min.js" defer></script>
+	<script src="./gsap/ScrollTrigger.min.js" defer></script>
+	<script src="./gsap/ScrollSmoother.min.js" defer></script>
+    <script src="./js/app.js" defer></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/cities.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="wrapper">
+            <header class="container">
+                <div class="nav flex ac jb">
+                    <h2 class="logo">WorkId</h2>
+                    <div class="types flex">
+                        <a href="./index.html" class="btn wh">Find Work</a>
+                        <a href="./post.html" class="btn wh">Post Job</a>
+                    </div>
+                    <a href="./login.html" class="login flex ac">
+                        <img src="./img/login.svg">
+                        <p class="wh">Register</p>
+                    </a>
+                </div>
+                <div class="category flex ">
+                    <a href="#">Top professions</a>
+                    <a id="active" href="#">Top cities</a>
+                </div>
+            </header>
+            <main class="container">
+                <div class="galery flex">
+                    <div class="galery__left">
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/417192/pexels-photo-417192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>New York City, SUA</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/409127/pexels-photo-409127.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Los Angeles, SUA</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Chicago, SUA</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/92248/pexels-photo-92248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>San Francisco, SUA</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Washington D.C., SUA</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/548084/pexels-photo-548084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Toronto, Canada</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Vancouver, Canada</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/97906/pexels-photo-97906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Londra, Regatul Unit</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/242124/pexels-photo-242124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Paris, Franța</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1209978/pexels-photo-1209978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Berlin, Germania</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1036657/pexels-photo-1036657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Madrid, Spania</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/681335/pexels-photo-681335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Roma, Italia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/366283/tianjin-twilight-city-scenery-366283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Milano, Italia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/462331/pexels-photo-462331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Barcelona, Spania</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1604141/pexels-photo-1604141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Amsterdam, Olanda</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1292843/pexels-photo-1292843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Bruxelles, Belgia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1191377/pexels-photo-1191377.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Viena, Austria</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1089194/pexels-photo-1089194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Praga, Cehia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/2058911/pexels-photo-2058911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Budapesta, Ungaria</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1374377/pexels-photo-1374377.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Stockholm, Suedia</h3>
+                        </a>
+                    </div>
+                    <div class="galery__right">
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Oslo, Norvegia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/887845/pexels-photo-887845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Helsinki, Finlanda</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/139303/pexels-photo-139303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Copenhaga, Danemarca</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1095826/pexels-photo-1095826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Moscova, Rusia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/50859/pexels-photo-50859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Sankt Petersburg, Rusia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1538177/pexels-photo-1538177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Istanbul, Turcia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/707667/pexels-photo-707667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Atena, Grecia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/2093323/pexels-photo-2093323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Tokyo, Japonia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1209982/pexels-photo-1209982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Kyoto, Japonia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/681336/pexels-photo-681336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Beijing, China</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Shanghai, China</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/240225/pexels-photo-240225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Hong Kong, China</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/802024/pexels-photo-802024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Seul, Coreea de Sud</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/1470405/pexels-photo-1470405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Singapore, Singapore</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Bangkok, Thailanda</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/599459/pexels-photo-599459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Sydney, Australia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Melbourne, Australia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/874629/pexels-photo-874629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Rio de Janeiro, Brazilia</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/8047/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Buenos Aires, Argentina</h3>
+                        </a>
+                        <a href="#" class="galery__item">
+                            <img src="https://images.pexels.com/photos/599982/pexels-photo-599982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            <h3>Cape Town, Africa de Sud</h3>
+                        </a>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="container">
+                    <div class="lang">
+                        <h2 class="logo">WorkId</h2>
+                        <a href="#" class="lang__btn">
+                            <p>Português</p>
+                            <img src="./img/flagPt.svg">
+                        </a>
+                        <div class="lang__rofl">
+                            <p class="lang__text">English is better</p>
+                            <img src="./img/flagEng.svg" class="lang__flag">
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list__find">
+                            <h3 class="list__title">To the applicant</h3>
+                            <ul>
+                                <a href="#"><li class="list__item">Find a job</li></a>
+                                <a href="#"><li class="list__item">Post a resume</li></a>
+                                <a href="#"><li class="list__item">How to make a resume</li></a>
+                            </ul>
+                        </div>
+                        <div class="list__post">
+                            <h3 class="list__title">To the employer</h3>
+                            <ul>
+                                <a href="#"><li class="list__item">Add a vacancy</li></a>
+                                <a href="#"><li class="list__item">Resume Search</li></a>
+                                <a href="#"><li class="list__item">Our services</li></a>
+                            </ul>
+                        </div>
+                        <div class="list__all">
+                            <h3 class="list__title">WorkId</h3>
+                            <ul>
+                                <a href="#"><li class="list__item">About the company</li></a>
+                                <a href="#"><li class="list__item">Brand documentation</li></a>
+                                <a href="#"><li class="list__item">Write to tech support</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a href="./404.html" class="socials__btn">
+                            <img src="./img/facebook.svg" class="socials__logo">
+                            <p class="socials__name">Facebook</p>
+                        </a>
+                        <a href="./404.html" class="socials__btn">
+                            <img src="./img/linkedin.svg" class="socials__logo">
+                            <p class="socials__name">Linkedin</p>
+                        </a>
+                        <a href="./404.html" class="socials__btn">
+                            <img src="./img/twitter.svg" class="socials__logo">
+                            <p class="socials__name">Twitter</p>
+                        </a>
+                    </div>
+                </div>
+                <p class="permisions">
+                    Todos os direitos são reservados e protegidos pelas leis vigentes em todo o mundo. O uso dos materiais deste site só é possível com a permissão por escrito da WorkID LLC. A administração não é responsável pelo conteúdo dos anúncios postados. E, ao mesmo tempo, Lilian Sevcenco se esforçou muito e gastou muito tempo neste projeto. Portanto, as estimativas abaixo de 20 Não são aceitas.
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
