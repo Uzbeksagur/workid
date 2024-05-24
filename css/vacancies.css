@@ -1,0 +1,118 @@
+body {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+a {
+    transition: none;
+}
+
+/* main */
+
+.main {
+    margin-top: 100px;
+}
+
+.main__text h1 {
+    font-size: 42px;
+}
+
+.main__text h2 {
+    color: var(--black);
+    font-size: 34px;
+    padding: 12px 22px;
+    background: var(--white);
+    border-radius: 12px;
+}
+
+/* vacancies */
+
+.vacancies {
+    margin-top: 80px;
+}
+
+.vacancies__item {
+    max-width: 920px;
+    border-radius: 16px;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0 auto 60px auto; 
+}
+
+.img {
+    height: 200px;
+}
+
+.img1 {
+    background: url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+}
+.img2 {
+    background: url('https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+}
+.img3 {
+    background: url('https://images.pexels.com/photos/3182835/pexels-photo-3182835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+}
+.img4 {
+    background: url('https://images.pexels.com/photos/224924/pexels-photo-224924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+}
+.img5 {
+    background: url('https://images.pexels.com/photos/2449452/pexels-photo-2449452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+}
+.img6 {
+    background: url('https://images.pexels.com/photos/3760532/pexels-photo-3760532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+}
+
+.vacancies__text {
+    padding: 24px;
+}
+
+.vacancies__text span {
+    font-size: 24px;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-top: 22px;
+}
+
+.vacancies__text h2 {
+    font-size: 36px;
+    color: var(--black);
+    margin: 18px 0;
+}
+
+.p {
+    margin-bottom: 18px;
+}
+
+.p p {
+    font-size: 20px;
+    color: var(--black);
+}
+
+.p p:first-of-type {
+    color: #d4a752;
+    margin-right: 18px;
+}
+
+.btn {
+    padding: 8px 22px;
+}
+
+.a img {
+    width: 30px;
+}
+
+.a p {
+    color: var(--black);
+}
+
+.a > * {
+    margin-right: 16px;
+}

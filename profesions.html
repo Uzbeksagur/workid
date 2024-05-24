@@ -13,6 +13,7 @@
 	<script src="./gsap/ScrollTrigger.min.js" defer></script>
 	<script src="./gsap/ScrollSmoother.min.js" defer></script>
     <script src="./js/app.js" defer></script>
+    <script src="./js/preloader.js"></script>
     <!-- styles -->
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="./css/profesions.css">
 </head>
 <body>
+    <div style="height: 100%; width: 100%; position: fixed; display: flex; z-index: 1; align-items: center; justify-content: center; background-color: black;" class="div"><img src="https://tenor.com/ru/view/mapache-pedro-gif-7206648027763736533.gif" style="width: 200px; height: 200px;"></div>
     <div class="parent">
         <div class="wrapper">
             <header class="container">
@@ -36,7 +38,7 @@
                 </div>
                 <div class="category flex ">
                     <a id="active" href="#">Top professions</a>
-                    <a href="#">Top cities</a>
+                    <a href="./cities.html">Top cities</a>
                 </div>
             </header>
             <main class="container">
@@ -708,8 +710,8 @@
                 <div class="container">
                     <div class="lang">
                         <h2 class="logo">WorkId</h2>
-                        <a href="#" class="lang__btn">
-                            <p>Português</p>
+                        <a class="lang__btn">
+                            <p>Sem Português</p>
                             <img src="./img/flagPt.svg">
                         </a>
                         <div class="lang__rofl">
@@ -721,25 +723,25 @@
                         <div class="list__find">
                             <h3 class="list__title">To the applicant</h3>
                             <ul>
-                                <a href="#"><li class="list__item">Find a job</li></a>
-                                <a href="#"><li class="list__item">Post a resume</li></a>
-                                <a href="#"><li class="list__item">How to make a resume</li></a>
+                                <a href="./profesions.html"><li class="list__item">Find a job</li></a>
+                                <a href="./login.html"><li class="list__item">Post a resume</li></a>
+                                <a href="./resume.html"><li class="list__item">How to make a resume</li></a>
                             </ul>
                         </div>
                         <div class="list__post">
                             <h3 class="list__title">To the employer</h3>
                             <ul>
-                                <a href="#"><li class="list__item">Add a vacancy</li></a>
-                                <a href="#"><li class="list__item">Resume Search</li></a>
-                                <a href="#"><li class="list__item">Our services</li></a>
+                                <a href="./post.html"><li class="list__item">Add a vacancy</li></a>
+                                <a href="./cities.html"><li class="list__item">Resume Search</li></a>
+                                <a href="./index.html"><li class="list__item">Our services</li></a>
                             </ul>
                         </div>
                         <div class="list__all">
                             <h3 class="list__title">WorkId</h3>
                             <ul>
-                                <a href="#"><li class="list__item">About the company</li></a>
-                                <a href="#"><li class="list__item">Brand documentation</li></a>
-                                <a href="#"><li class="list__item">Write to tech support</li></a>
+                                <a href="./resume.html"><li class="list__item">About the company</li></a>
+                                <a href="./resume.html"><li class="list__item">Brand documentation</li></a>
+                                <a href="./resume.html"><li class="list__item">Write to tech support</li></a>
                             </ul>
                         </div>
                     </div>

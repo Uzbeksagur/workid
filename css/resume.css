@@ -1,0 +1,32 @@
+body {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+a {
+    transition: none;
+}
+
+.main {
+    margin: 80px auto;
+    max-width: 820px;
+}
+
+.main img {
+    margin: 0 auto;
+    display: block;
+}
+
+.main h1 {
+    font-size: 44px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.main p {
+    margin-bottom: 50px;
+}
+
+.main h2 {
+    margin-bottom: 20px;
+}
